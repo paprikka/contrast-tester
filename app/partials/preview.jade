@@ -1,0 +1,17 @@
+.navbar.navbar-inverse.navbar-fixed-top.main-nav
+  .navbar-inner
+    .container
+      .row
+        .span3
+          ul.nav
+            li
+              a(href="#/about") About
+        form.navbar-form.span9
+          input(type="range", ng-model="blur").input-small
+          input(type="text", placeholder="Example url here...", ng-model="pageUrl").input-xxlarge
+          button.btn.btn-primary 
+            i.icon-refresh
+.subpage-container
+  .blur-preview-container
+    iframe(ng-show="pageUrl", app-blur-preview, ng-src="{{pageUrl}}").blur-preview
+ 
