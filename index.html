@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contrast tester</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://bootswatch.com/default/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+
+        <ul class="nav">
+          <li class="active">
+            <a href="/">Check contrast</a>
+          </li>
+          <li>
+            <a href="http://flavors.me/rpastuszak">Rafał Pastuszak</a>
+          </li>
+        </ul>
+
+        <form id="blur-goto" class="navbar-form pull-right">
+          <input type="range" class="input-medium" value="0" min="0" max="20" id="blur-value" />
+          <input type="text" class="input-xlarge" id="blur-target-url" />
+          <button type="submit" class="btn btn-inverse"> Load site</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="page-container">
+    <div class="blur-target-wrapper" id="blur-target-container">
+      
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
