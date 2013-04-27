@@ -5,6 +5,8 @@ App = angular.module('app', [
   'ngCookies'
   'ngResource'
   'app.controllers'
+  'app.controllers.PreviewCtrl'
+
   'app.directives'
   'app.filters'
   'app.services'
@@ -18,18 +20,14 @@ App.config([
 
     $routeProvider
 
-      .when('/todo', {templateUrl: '/partials/todo.html',
-      controller: 'TodoCtrl'})
-
-      .when('/view1', {templateUrl: '/partials/partial1.html',
-      controller: 'AppCtrl'})
-
-      .when('/view2', {templateUrl: '/partials/partial2.html',
-      controller: 'AppCtrl'})
+      .when('/preview/:src', {templateUrl: '/partials/preview.html',
+      controller: 'PreviewCtrl'})
+      .when('/preview', {templateUrl: '/partials/preview.html',
+      controller: 'PreviewCtrl'})
 
     # Catch all
-      .otherwise({redirectTo: '/todo'})
+      .otherwise({redirectTo: '/preview'})
 
     # Without server side support html5 must be disabled.
-    $locationProvider.html5Mode(true)
+    $locationProvider.html5Mode off
 ])
