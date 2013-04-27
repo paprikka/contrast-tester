@@ -1,0 +1,27 @@
+include head
+body
+  .wrapper
+    .navbar.navbar-static-top.navbar-inverse
+      .navbar-inner
+        .container
+          button.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a(href='/', title="Rafal Pastuszak").brand: img(src="img/avatar_normal.png", width="32", height="32").avatar-icon
+          .nav-collapse
+            div(ng-include="'/partials/nav.html'")
+    .container.main-content
+      div(ng-view)
+      div Angular Brunch seed app: v<span app-version></span>
+    .push
+
+  footer.footer
+    .container
+      p
+        small
+          a(href='https://github.com/scoarescoare/angular-brunch-true-north') angular-brunch-true-north | source
+
+  //- JavaScript at the bottom for fast page loading
+  script(src='/js/vendor.js')
+  script(src='/js/app.js')
